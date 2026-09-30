@@ -129,7 +129,8 @@ section.block { padding: 72px 0; border-top: 1px solid var(--line); }
 
 /* Contact / footer */
 .contact { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: end; }
-.contact h2 { max-width: 20ch; }
+.contact h2 { max-width: 24ch; }
+.contact-more { margin: 16px 0 0; font-size: .95rem; color: var(--ink-soft); }
 .site-foot { padding: 28px 0 40px; font-size: .88rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
 
 /* Case study page */
