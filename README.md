@@ -26,7 +26,7 @@ XGBoost reached 97.71% test accuracy and 0.9634 macro F1, caught every Unhealthy
 
 ## Skills shown
 
-**SQL:** BigQuery, PostgreSQL, DuckDB, joins, CTEs, window functions
+**SQL:** BigQuery, filter, DuckDB, joins, CTEs, window functions
 **Python:** pandas, matplotlib, seaborn, scikit-learn, XGBoost, Streamlit
 **Spreadsheet:** pivot tables, descriptive statistics, hypothesis testing, regression
 **Tableau:** dashboard design, LOD expressions, table calculations
