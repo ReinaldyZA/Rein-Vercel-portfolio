@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluating twin-date campaigns and a product page A/B test | Reinaldy Z. Arkaan</title>
+<meta name="description" content="All three campaigns returned about Rp55 of revenue per Rp1 of discount, so a bigger budget bought a bigger result, not a better one. The new product page lifted average order value by 11%.">
+<meta property="og:title" content="Evaluating twin-date campaigns and a product page A/B test | Reinaldy Z. Arkaan">
+<meta property="og:description" content="All three campaigns returned about Rp55 of revenue per Rp1 of discount, so a bigger budget bought a bigger result, not a better one. The new product page lifted average order value by 11%.">
+<meta name="theme-color" content="#10283F">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Reinaldy Z. Arkaan <span>Data Analyst</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#thesis">Thesis</a>
+      <a href="../index.html#work">Projects</a>
+      <a class="hide-sm" href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <div class="case-head">
+    <a class="back" href="../index.html#work">Back to all projects</a>
+    <h1>Evaluating twin-date campaigns and a product page A/B test</h1>
+    <p class="lede">All three campaigns returned about Rp55 of revenue per Rp1 of discount, so a bigger budget bought a bigger result, not a better one. The new product page lifted average order value by 11%.</p>
+    <dl class="case-meta">
+      <div><dt>Program</dt><dd>RevoU Statistics and Spreadsheet, intermediate assignment</dd></div>
+      <div><dt>Date</dt><dd>July 2026</dd></div>
+      <div><dt>Tools</dt><dd>Google Sheets, pivot tables, SUMIFS, QUARTILE, T.TEST</dd></div>
+      <div><dt>Deliverables</dt><dd>11-sheet workbook, 18-slide deck</dd></div>
+    </dl>
+  </div>
+  <div class="case-body">
+    <div>
+      <section><h2>The question</h2><p class="question">How can TokoBli get the most revenue out of its twin-date campaigns while keeping discount spending efficient?</p></section>
+      <section><h2>Context</h2><p>4,217 transactions from the 10.10, 11.11 and 12.12 campaigns of 2023, with 14 columns covering product, customer, price, discount, revenue and category.</p></section>
+      <section><h2>What I did</h2><ol class="steps"><li>Cleaned the data from 4,217 to 4,209 rows: dropped a column that was 99.5% empty, removed rows with missing values and duplicates, and fixed data types.</li><li>Removed revenue outliers with the IQR method and computed descriptive statistics for quantity, discount and revenue.</li><li>Compared campaigns and categories on transactions, customers, units, revenue and revenue per rupiah of discount.</li><li>Ran a Welch two-sample t-test on transaction value for the old and new product pages.</li></ol></section>
+      <section><h2>What I found</h2><ul class="findings"><li><strong>Reach was identical.</strong> The three campaigns differed by only two transactions, 1,398 to 1,400.</li><li><strong>11.11 won on value.</strong> Rp6.81 billion in revenue, 9.5% above 10.10 and 13.3% above 12.12, with the fewest customers.</li><li><strong>Discount efficiency was flat.</strong> Revenue per Rp1 of discount was 55.0, 54.4 and 54.9. Men&#x27;s Fashion returned 144, Appliances only 27.</li><li><strong>The new page wins.</strong> Average transaction value rose from Rp745,890 to Rp830,460, with a p-value of 2.97 × 10⁻¹⁵.</li></ul></section>
+      <section><h2>What I recommended</h2><ul class="recs"><li>Use the 11.11 setup as the template for the next campaign.</li><li>Move discount budget from low-return categories such as Appliances to high-return ones such as Men&#x27;s Fashion.</li><li>Lift basket size with bundles and minimum-spend free shipping, since a typical order has one item.</li><li>Roll out the new product page and keep testing after launch.</li></ul></section>
+      
+      <section><h2>From the deck</h2><div class="gallery"><button type="button" aria-label="Enlarge slide: Title"><img src="../assets/img/slides/tokobli-campaign-1.jpg" alt="Slide: Title" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Campaign comparison"><img src="../assets/img/slides/tokobli-campaign-2.jpg" alt="Slide: Campaign comparison" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Men&#x27;s Fashion"><img src="../assets/img/slides/tokobli-campaign-3.jpg" alt="Slide: Men&#x27;s Fashion" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: A/B test result"><img src="../assets/img/slides/tokobli-campaign-4.jpg" alt="Slide: A/B test result" loading="lazy" width="1280" height="720"></button></div><p class="note">Select a slide to enlarge it. The full deck is in the links.</p></section>
+    </div>
+    <aside class="aside">
+      <h2>Files and links</h2>
+      <ul class="links"><li><a href="../files/tokobli-campaign.pdf">View the deck <small>PDF</small></a></li><li><a href="../files/tokobli-campaign.pptx" download>Download the deck <small>PPTX</small></a></li><li><a href="https://docs.google.com/spreadsheets/d/1ec_Z0g4CwWygPyOb5oMyZOdFyFHPgfkLve325YZ1MHM/edit?usp=sharing" target="_blank" rel="noopener">Open the spreadsheet <small>Google Sheets</small></a></li><li><a href="../files/tokobli-campaign-workbook.xlsx" download>Download the workbook <small>XLSX</small></a></li></ul>
+      <h2>Tools</h2>
+      <ul class="tags"><li class="tag">Spreadsheet</li></ul>
+    </aside>
+  </div>
+</div>
+<div class="wrap next-case"><span>Next project</span><a href="revoshion-corporate-profit.html">Why Corporate profit fell while sales grew</a></div>
+</main>
+<dialog class="lightbox"><button type="button">Close</button><img src="" alt=""></dialog>
+<footer class="site-foot">
+  <div class="wrap">Reinaldy Zulfananda Arkaan, 2026. Projects from RevoU Full Stack Data Analytics and my undergraduate thesis at BINUS University. Company names in the RevoU projects are fictional.</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

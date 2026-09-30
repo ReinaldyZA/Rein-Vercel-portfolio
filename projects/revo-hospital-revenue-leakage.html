@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracking IDR 14.5 billion of uncollected hospital revenue | Reinaldy Z. Arkaan</title>
+<meta name="description" content="Self-pay patients are 13% of admissions but hold 30% of all pending revenue. The backlog is spread across all eight branches, so the fix has to be a network policy.">
+<meta property="og:title" content="Tracking IDR 14.5 billion of uncollected hospital revenue | Reinaldy Z. Arkaan">
+<meta property="og:description" content="Self-pay patients are 13% of admissions but hold 30% of all pending revenue. The backlog is spread across all eight branches, so the fix has to be a network policy.">
+<meta name="theme-color" content="#10283F">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Reinaldy Z. Arkaan <span>Data Analyst</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#thesis">Thesis</a>
+      <a href="../index.html#work">Projects</a>
+      <a class="hide-sm" href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <div class="case-head">
+    <a class="back" href="../index.html#work">Back to all projects</a>
+    <h1>Tracking IDR 14.5 billion of uncollected hospital revenue</h1>
+    <p class="lede">Self-pay patients are 13% of admissions but hold 30% of all pending revenue. The backlog is spread across all eight branches, so the fix has to be a network policy.</p>
+    <dl class="case-meta">
+      <div><dt>Program</dt><dd>RevoU Data Visualisation, intermediate assignment</dd></div>
+      <div><dt>Date</dt><dd>September 2026</dd></div>
+      <div><dt>Tools</dt><dd>Tableau Desktop, Tableau Public, LOD expressions, table calculations</dd></div>
+      <div><dt>Deliverables</dt><dd>Interactive dashboard, 19-slide report</dd></div>
+    </dl>
+  </div>
+  <div class="case-body">
+    <div>
+      <section><h2>The question</h2><p class="question">Which patient segments and periods should the finance lead chase first to bring pending revenue below the 10% tolerance?</p></section>
+      <section><h2>Context</h2><p>Revo Hospital runs eight branches across Java. Over two years it booked IDR 99 billion in net revenue, and IDR 14.5 billion of it, 14.7%, is still unpaid. That money cannot fund branch operations.</p></section>
+      <section><h2>What I did</h2><ol class="steps"><li>Picked one user and one decision: the finance lead deciding where collections should go first. That made this an analytical dashboard rather than an operational one.</li><li>Modelled five tables around admissions at one row per admission, and validated the grain so billing is never counted twice.</li><li>Built eight views, each chosen for a job: a KPI scorecard, segment comparison, monthly trend, bill distribution, an LOD view, a department ranking, a running table calculation and a map.</li><li>Placed all filters in a fixed right rail that applies to every sheet, and wrote each chart title as a finding.</li></ol></section>
+      <section><h2>What I found</h2><ul class="findings"><li><strong>Self-pay drives the gap.</strong> 35% of self-pay revenue is unpaid, against 10 to 13% for insured patients. That is about IDR 4 billion.</li><li><strong>The backlog is systemic.</strong> Every branch sits between 12% and 16% pending, so no single branch fix recovers the money.</li><li><strong>Two departments hold 40%.</strong> Cardiology and Oncology carry about IDR 6 billion of pending revenue, and Cardiology has the highest rate at 18%.</li><li><strong>Large bills fail more often.</strong> Bills above IDR 20 million are 6% of cases but 23% of pending revenue.</li><li><strong>It never fixed itself.</strong> Pending revenue stayed above the 10% target in 22 of 24 months, peaking at 23%.</li></ul></section>
+      <section><h2>What I recommended</h2><ul class="recs"><li>Require a deposit or payment plan for self-pay bills above IDR 20 million.</li><li>Change payment policy at network level instead of branch by branch.</li><li>Offer structured instalments in Cardiology and Oncology, with financial counselling for any bill above IDR 20 million.</li><li>Review pending revenue monthly against the 10% target and scale the collections team with admission volume.</li></ul></section>
+      <section><h2>Live dashboard</h2>
+<div class="embed"><iframe src="https://public.tableau.com/views/CollectionRiskDashboardRevoHospitalJavaNetwork_17896636711850/CollectionRiskDashboardRevoHospitalJavaNetwork?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom" title="Tableau dashboard: Tracking IDR 14.5 billion of uncollected hospital revenue" loading="lazy" allowfullscreen></iframe></div>
+<p class="note">If the dashboard does not load, open it on Tableau Public from the links on this page.</p></section>
+      <section><h2>From the deck</h2><div class="gallery"><button type="button" aria-label="Enlarge slide: Dashboard angle"><img src="../assets/img/slides/revo-hospital-1.jpg" alt="Slide: Dashboard angle" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Final dashboard"><img src="../assets/img/slides/revo-hospital-2.jpg" alt="Slide: Final dashboard" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: KPI scorecard"><img src="../assets/img/slides/revo-hospital-3.jpg" alt="Slide: KPI scorecard" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Seven findings"><img src="../assets/img/slides/revo-hospital-4.jpg" alt="Slide: Seven findings" loading="lazy" width="1280" height="720"></button></div><p class="note">Select a slide to enlarge it. The full deck is in the links.</p></section>
+    </div>
+    <aside class="aside">
+      <h2>Files and links</h2>
+      <ul class="links"><li><a href="https://public.tableau.com/views/CollectionRiskDashboardRevoHospitalJavaNetwork_17896636711850/CollectionRiskDashboardRevoHospitalJavaNetwork?:language=en-US&amp;publish=yes&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener">Live dashboard <small>Tableau Public</small></a></li><li><a href="../files/revo-hospital-tableau.pdf">View the report <small>PDF</small></a></li><li><a href="../files/revo-hospital-tableau.pptx" download>Download the report <small>PPTX</small></a></li></ul>
+      <h2>Tools</h2>
+      <ul class="tags"><li class="tag">Tableau</li></ul>
+    </aside>
+  </div>
+</div>
+<div class="wrap next-case"><span>Next project</span><a href="revobank-customer-segmentation.html">Finding which credit card customers can safely spend more</a></div>
+</main>
+<dialog class="lightbox"><button type="button">Close</button><img src="" alt=""></dialog>
+<footer class="site-foot">
+  <div class="wrap">Reinaldy Zulfananda Arkaan, 2026. Projects from RevoU Full Stack Data Analytics and my undergraduate thesis at BINUS University. Company names in the RevoU projects are fictional.</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

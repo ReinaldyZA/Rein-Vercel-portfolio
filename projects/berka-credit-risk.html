@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What predicts a bad loan at a retail bank | Reinaldy Z. Arkaan</title>
+<meta name="description" content="Every loan on an account that had been overdrawn in the prior year went bad. Two screens the bank can run before approval bring the problematic loan rate from 11.1% to 5.0%.">
+<meta property="og:title" content="What predicts a bad loan at a retail bank | Reinaldy Z. Arkaan">
+<meta property="og:description" content="Every loan on an account that had been overdrawn in the prior year went bad. Two screens the bank can run before approval bring the problematic loan rate from 11.1% to 5.0%.">
+<meta name="theme-color" content="#10283F">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Reinaldy Z. Arkaan <span>Data Analyst</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#thesis">Thesis</a>
+      <a href="../index.html#work">Projects</a>
+      <a class="hide-sm" href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <div class="case-head">
+    <a class="back" href="../index.html#work">Back to all projects</a>
+    <h1>What predicts a bad loan at a retail bank</h1>
+    <p class="lede">Every loan on an account that had been overdrawn in the prior year went bad. Two screens the bank can run before approval bring the problematic loan rate from 11.1% to 5.0%.</p>
+    <dl class="case-meta">
+      <div><dt>Program</dt><dd>RevoU capstone project (DEEPP, Milestones 0 to 3)</dd></div>
+      <div><dt>Date</dt><dd>September 2026</dd></div>
+      <div><dt>Tools</dt><dd>Python, pandas, DuckDB (SQL), Tableau</dd></div>
+      <div><dt>Deliverables</dt><dd>21-slide deck, notebook, dashboard</dd></div>
+    </dl>
+  </div>
+  <div class="case-body">
+    <div>
+      <section><h2>The question</h2><p class="question">How can the credit team bring the problematic loan rate from 11% to below 5% within 12 months, using signals the bank already has before a loan is paid out?</p></section>
+      <section><h2>Context</h2><p>The Berka dataset is a public Czech retail banking dataset covering 1993 to 1998: 5,369 clients, 4,500 accounts, about 1.05 million transactions and 682 loans. 76 of those loans ended in default or arrears, which puts the problematic loan rate at 11.1%.</p></section>
+      <section><h2>What I did</h2><ol class="steps"><li>Framed the problem with DARCI, a one-sentence SMART problem statement and an issue tree with four root causes: weak account liquidity, cash flow strain, loan burden and thin banking history.</li><li>Joined eight tables in DuckDB into one row per loan, using only transactions dated before the loan was granted so the analysis reflects what an underwriter could actually see.</li><li>Tested each root cause in Python, ranked the drivers by risk lift and checked them with a simple logistic regression.</li><li>Built a risk score, simulated the effect of each screening rule on the portfolio and published a Tableau dashboard for the credit team.</li></ol></section>
+      <section><h2>What I found</h2><ul class="findings"><li><strong>All 27 loans on overdrawn accounts failed.</strong> They account for 35.5% of every bad loan in the portfolio, so the strongest warning signal already sits in the bank&#x27;s own data.</li><li><strong>Affordability matters, not loan size.</strong> Loans in the lowest quartile of payment to monthly inflow failed 5.8% of the time, against 19.3% in the highest quartile.</li><li><strong>Behaviour beats demographics.</strong> The riskiest 20% of the behaviour-based score hold 48 of the 76 bad loans, while customer demographics barely separate good loans from bad ones.</li><li><strong>The 1998 improvement is not real yet.</strong> Its 2.5% rate reflects loans that have not had time to fail yet, against 13 to 14% for mature cohorts.</li></ul></section>
+      <section><h2>What I recommended</h2><ul class="recs"><li>Send any applicant with an overdraft in the last 12 months to manual review. Alone this takes the rate from 11.1% to 7.5% without losing a good loan.</li><li>Add minimum balance, average balance and the overdraft flag to the scorecard and review the top 20% of scores. Combined with the first rule this lands at 5.0%.</li><li>Keep a payment to inflow cap of 0.17 as a buffer, since 5.0% sits exactly on the target.</li><li>Report the KPI by loan vintage at equal loan age so the team does not read maturity bias as progress.</li></ul></section>
+      
+      <section><h2>From the deck</h2><div class="gallery"><button type="button" aria-label="Enlarge slide: Project background"><img src="../assets/img/slides/berka-1.jpg" alt="Slide: Project background" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Overdraft history and loan outcome"><img src="../assets/img/slides/berka-2.jpg" alt="Slide: Overdraft history and loan outcome" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Risk score deciles"><img src="../assets/img/slides/berka-3.jpg" alt="Slide: Risk score deciles" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Findings and actions"><img src="../assets/img/slides/berka-4.jpg" alt="Slide: Findings and actions" loading="lazy" width="1280" height="720"></button></div><p class="note">Select a slide to enlarge it. The full deck is in the links.</p></section>
+    </div>
+    <aside class="aside">
+      <h2>Files and links</h2>
+      <ul class="links"><li><a href="../files/berka-credit-risk.pdf">View the deck <small>PDF</small></a></li><li><a href="../files/berka-credit-risk.pptx" download>Download the deck <small>PPTX</small></a></li><li><a href="https://public.tableau.com/shared/9DCRP6QSK?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener">Tableau dashboard <small>Tableau Public</small></a></li><li><a href="https://colab.research.google.com/drive/1JrZ3ZMpgqfUzcoVN8JqiJjYGCVPZRgF2?usp=sharing" target="_blank" rel="noopener">Notebook, cleaning and EDA <small>Google Colab</small></a></li><li><a href="https://colab.research.google.com/drive/1e9emuAy44EXOmNlLx93IDxuazRG6gOMy?usp=sharing" target="_blank" rel="noopener">Notebook, visuals and model <small>Google Colab</small></a></li><li><a href="../files/berka-credit-risk.ipynb" download>Download the notebook <small>IPYNB</small></a></li><li><a href="https://github.com/ReinaldyZA" target="_blank" rel="noopener">Source code <small>GitHub</small></a></li></ul>
+      <h2>Tools</h2>
+      <ul class="tags"><li class="tag">Python</li><li class="tag">SQL</li><li class="tag">Tableau</li></ul>
+    </aside>
+  </div>
+</div>
+<div class="wrap next-case"><span>Next project</span><a href="revo-hospital-revenue-leakage.html">Tracking IDR 14.5 billion of uncollected hospital revenue</a></div>
+</main>
+<dialog class="lightbox"><button type="button">Close</button><img src="" alt=""></dialog>
+<footer class="site-foot">
+  <div class="wrap">Reinaldy Zulfananda Arkaan, 2026. Projects from RevoU Full Stack Data Analytics and my undergraduate thesis at BINUS University. Company names in the RevoU projects are fictional.</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

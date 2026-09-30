@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reinaldy Zulfananda Arkaan | Data Analyst</title>
+<meta name="description" content="Data analyst portfolio: SQL, Python, spreadsheet and Tableau projects, plus a machine learning thesis on Jakarta&#x27;s air quality.">
+<meta property="og:title" content="Reinaldy Zulfananda Arkaan | Data Analyst">
+<meta property="og:description" content="Data analyst portfolio: SQL, Python, spreadsheet and Tableau projects, plus a machine learning thesis on Jakarta&#x27;s air quality.">
+<meta name="theme-color" content="#10283F">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Reinaldy Z. Arkaan <span>Data Analyst</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html#thesis">Thesis</a>
+      <a href="index.html#work">Projects</a>
+      <a class="hide-sm" href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <section class="hero">
+    <h1>In 700 days of readings, Jakarta had 14 days of good air.</h1>
+    <div class="airstrip" id="airstrip">
+      <div class="airstrip-chart"></div>
+      <div class="airstrip-foot">
+        <div class="legend"><span style="--c:var(--green)">Good, 14 days</span><span style="--c:var(--blue)">Moderate, 524 days</span><span style="--c:var(--amber)">Unhealthy, 162 days</span></div>
+        <div>Daily ISPU, highest of five stations, Jan 2024 to Nov 2025</div>
+      </div>
+    </div>
+    <p class="lede">I'm Reinaldy, a data analyst and 2026 Informatics graduate from BINUS University. That chart comes from the data behind my thesis. The rest of this site is the work I've done since, in retail, e-commerce, banking and healthcare, each taken from a business question to a recommendation.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#work">See the projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/reinaldy-zulfananda-arkaan-30567a179/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/ReinaldyZA" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+</div>
+
+<section class="block" id="thesis">
+  <div class="wrap thesis">
+    <div>
+      <h2 style="margin-bottom:18px">Thesis</h2>
+      <h3>JakU: classifying Jakarta's air quality with machine learning</h3>
+      <p>We compared Random Forest, XGBoost and SVM on official ISPU readings using CRISP-DM, then built a Streamlit dashboard with a User-Centered Design process so residents can check the air and simulate predictions.</p>
+      <dl class="facts">
+        <div><dt>97.71%</dt><dd>test accuracy with XGBoost</dd></div>
+        <div><dt>0.9634</dt><dd>macro F1 on imbalanced classes</dd></div>
+        <div><dt>53 of 53</dt><dd>Unhealthy days caught in the test set</dd></div>
+        <div><dt>78.28</dt><dd>usability score (SUS), benchmark is 68</dd></div>
+      </dl>
+      <div class="hero-actions" style="margin-top:0">
+        <a class="btn primary" href="projects/jaku-thesis.html">Read the case study</a>
+        <a class="btn" href="https://jaku-dashboard5-reinzulfarkaan.streamlit.app/" target="_blank" rel="noopener">Open the live app</a>
+        <a class="btn" href="https://github.com/ReinaldyZA/JAKU5" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <figure class="thesis-media">
+      <img src="assets/img/jaku/feature-importance-xgb.jpg" alt="XGBoost feature importance. PM2.5 dominates at 0.73." loading="lazy">
+      <figcaption>In the chosen XGBoost model, PM2.5 accounts for 73% of feature importance.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>Projects</h2>
+        <p>Seven analyses from the RevoU Full Stack Data Analytics program, newest first. Each one opens with the finding, then shows the method, the files and the slides.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects by tool"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="business" aria-pressed="false">Business analysis</button><button type="button" data-filter="spreadsheet" aria-pressed="false">Spreadsheet</button><button type="button" data-filter="sql" aria-pressed="false">SQL</button><button type="button" data-filter="python" aria-pressed="false">Python</button><button type="button" data-filter="tableau" aria-pressed="false">Tableau</button></div>
+    </div>
+    <ul class="work-list"><li class="work-item" data-tools="python sql tableau">
+  <a class="work-thumb" href="projects/berka-credit-risk.html" tabindex="-1" aria-hidden="true"><img src="assets/img/slides/berka-2.jpg" alt="" loading="lazy" width="1280" height="720"></a>
+  <div>
+    <h3><a href="projects/berka-credit-risk.html">What predicts a bad loan at a retail bank</a></h3>
+    <p class="work-meta">RevoU capstone project (DEEPP, Milestones 0 to 3), September 2026</p>
+    <ul class="tags"><li class="tag">Python</li><li class="tag">SQL</li><li class="tag">Tableau</li></ul>
+  </div>
+  <div>
+    <p class="work-finding">Every loan on an account that had been overdrawn in the prior year went bad. Two screens the bank can run before approval bring the problematic loan rate from 11.1% to 5.0%.</p>
+    <a class="work-link" href="projects/berka-credit-risk.html">Read the case study</a>
+  </div>
+</li><li class="work-item" data-tools="tableau">
+  <a class="work-thumb" href="projects/revo-hospital-revenue-leakage.html" tabindex="-1" aria-hidden="true"><img src="assets/img/slides/revo-hospital-2.jpg" alt="" loading="lazy" width="1280" height="720"></a>
+  <div>
+    <h3><a href="projects/revo-hospital-revenue-leakage.html">Tracking IDR 14.5 billion of uncollected hospital revenue</a></h3>
+    <p class="work-meta">RevoU Data Visualisation, intermediate assignment, September 2026</p>
+    <ul class="tags"><li class="tag">Tableau</li></ul>
+  </div>
+  <div>
+    <p class="work-finding">Self-pay patients are 13% of admissions but hold 30% of all pending revenue. The backlog is spread across all eight branches, so the fix has to be a network policy.</p>
+    <a class="work-link" href="projects/revo-hospital-revenue-leakage.html">Read the case study</a>
+  </div>
+</li><li class="work-item" data-tools="python">
+  <a class="work-thumb" href="projects/revobank-customer-segmentation.html" tabindex="-1" aria-hidden="true"><img src="assets/img/slides/revobank-2.jpg" alt="" loading="lazy" width="1280" height="720"></a>
+  <div>
+    <h3><a href="projects/revobank-customer-segmentation.html">Finding which credit card customers can safely spend more</a></h3>
+    <p class="work-meta">RevoU Python for Data Analysis, intermediate assignment, September 2026</p>
+    <ul class="tags"><li class="tag">Python</li></ul>
+  </div>
+  <div>
+    <p class="work-finding">744 cardholders, 38% of the base, made no transaction in six months. Only one of the two dormant groups has the debt headroom to be worth reactivating.</p>
+    <a class="work-link" href="projects/revobank-customer-segmentation.html">Read the case study</a>
+  </div>
+</li><li class="work-item" data-tools="sql">
+  <a class="work-thumb" href="projects/revogrocers-sales-sql.html" tabindex="-1" aria-hidden="true"><img src="assets/img/slides/revogrocers-2.jpg" alt="" loading="lazy" width="1280" height="720"></a>
+  <div>
+    <h3><a href="projects/revogrocers-sales-sql.html">Which grocery categories drive revenue, and why</a></h3>
+    <p class="work-meta">RevoU SQL, intermediate assignment, August 2026</p>
+    <ul class="tags"><li class="tag">SQL</li></ul>
+  </div>
+  <div>
+    <p class="work-finding">Every category reaches roughly the same 97,000 to 98,700 customers, so revenue follows how much each customer buys. The top four categories bring in about 44% of revenue.</p>
+    <a class="work-link" href="projects/revogrocers-sales-sql.html">Read the case study</a>
+  </div>
+</li><li class="work-item" data-tools="spreadsheet">
+  <a class="work-thumb" href="projects/tokobli-yearly-spending.html" tabindex="-1" aria-hidden="true"><img src="assets/img/slides/tokobli-regression-2.jpg" alt="" loading="lazy" width="1280" height="720"></a>
+  <div>
+    <h3><a href="projects/tokobli-yearly-spending.html">What drives an e-commerce customer&#x27;s yearly spending</a></h3>
+    <p class="work-meta">RevoU Statistics and Spreadsheet, advanced assignment, July 2026</p>
+    <ul class="tags"><li class="tag">Spreadsheet</li></ul>
+  </div>
+  <div>
+    <p class="work-finding">Five behavioural and financial variables explain 92.7% of how much a customer spends in a year. Age stops mattering once the others are in the model.</p>
+    <a class="work-link" href="projects/tokobli-yearly-spending.html">Read the case study</a>
+  </div>
+</li><li class="work-item" data-tools="spreadsheet">
+  <a class="work-thumb" href="projects/tokobli-campaign-ab-test.html" tabindex="-1" aria-hidden="true"><img src="assets/img/slides/tokobli-campaign-2.jpg" alt="" loading="lazy" width="1280" height="720"></a>
+  <div>
+    <h3><a href="projects/tokobli-campaign-ab-test.html">Evaluating twin-date campaigns and a product page A/B test</a></h3>
+    <p class="work-meta">RevoU Statistics and Spreadsheet, intermediate assignment, July 2026</p>
+    <ul class="tags"><li class="tag">Spreadsheet</li></ul>
+  </div>
+  <div>
+    <p class="work-finding">All three campaigns returned about Rp55 of revenue per Rp1 of discount, so a bigger budget bought a bigger result, not a better one. The new product page lifted average order value by 11%.</p>
+    <a class="work-link" href="projects/tokobli-campaign-ab-test.html">Read the case study</a>
+  </div>
+</li><li class="work-item" data-tools="business tableau">
+  <a class="work-thumb" href="projects/revoshion-corporate-profit.html" tabindex="-1" aria-hidden="true"><img src="assets/img/slides/ubp-2.jpg" alt="" loading="lazy" width="1280" height="720"></a>
+  <div>
+    <h3><a href="projects/revoshion-corporate-profit.html">Why Corporate profit fell while sales grew</a></h3>
+    <p class="work-meta">RevoU Understanding Business Problems, intermediate assignment, July 2026</p>
+    <ul class="tags"><li class="tag">Business analysis</li><li class="tag">Tableau</li></ul>
+  </div>
+  <div>
+    <p class="work-finding">Sales rose 20.4% but Corporate profit fell 13.6%. Furniture is the only category losing ground, down 56.6%, and discounts are the fastest lever to fix it.</p>
+    <a class="work-link" href="projects/revoshion-corporate-profit.html">Read the case study</a>
+  </div>
+</li></ul>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="wrap about">
+    <div>
+      <h2 style="margin-bottom:18px">About</h2>
+      <p>I studied Informatics at BINUS University and spent a year as a system analyst intern before moving into data. That mix shapes how I work: I start by pinning down who needs the answer and what they will do with it, then go to the data.</p>
+      <p>I'm looking for roles in data analysis, business intelligence and business or system analysis.</p>
+      <ol class="timeline" style="margin-top:28px">
+        <li><span class="when">2026</span><strong>RevoU, Full Stack Data Analytics</strong>Business problem framing, statistics, SQL, Python, Tableau and a capstone project.</li>
+        <li><span class="when">2026</span><strong>BINUS University, S.Kom in Informatics</strong>Thesis on machine learning classification of Jakarta's air quality.</li>
+        <li><span class="when">Feb 2025 to Feb 2026</span><strong>System Analyst Intern, PT Pratama Solusi Teknologi</strong>Requirements (BRD, SRS), UML, UAT and sentiment analysis of Play Store reviews for a regional public service app.</li>
+      </ol>
+    </div>
+    <div>
+      <h2 style="margin-bottom:18px">Tools</h2>
+      <dl class="skills">
+        <div><dt>SQL</dt><dd>BigQuery, PostgreSQL, DuckDB. Joins, CTEs and window functions.</dd></div>
+        <div><dt>Python</dt><dd>pandas, matplotlib, seaborn, scikit-learn, XGBoost, Streamlit.</dd></div>
+        <div><dt>Spreadsheet</dt><dd>Google Sheets and Excel. Pivot tables, descriptive statistics, t-tests, regression.</dd></div>
+        <div><dt>Tableau</dt><dd>Dashboard design, LOD expressions, table calculations, Tableau Public.</dd></div>
+        <div><dt>Analysis</dt><dd>DARCI, SMART problem statements, issue trees, hypothesis testing, OBIPR.</dd></div>
+        <div><dt>Systems</dt><dd>Requirements documents, UML, UAT, user-centered design, Figma.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap contact">
+    <h2>Have a dataset and a question? Let's talk.</h2>
+    <div class="hero-actions" style="margin-top:0">
+      <a class="btn primary" href="https://www.linkedin.com/in/reinaldy-zulfananda-arkaan-30567a179/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      <a class="btn" href="https://github.com/ReinaldyZA" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">Reinaldy Zulfananda Arkaan, 2026. Projects from RevoU Full Stack Data Analytics and my undergraduate thesis at BINUS University. Company names in the RevoU projects are fictional.</div>
+</footer>
+<script src="assets/js/ispu-data.js"></script><script src="assets/js/main.js"></script>
+</body>
+</html>

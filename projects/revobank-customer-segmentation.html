@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finding which credit card customers can safely spend more | Reinaldy Z. Arkaan</title>
+<meta name="description" content="744 cardholders, 38% of the base, made no transaction in six months. Only one of the two dormant groups has the debt headroom to be worth reactivating.">
+<meta property="og:title" content="Finding which credit card customers can safely spend more | Reinaldy Z. Arkaan">
+<meta property="og:description" content="744 cardholders, 38% of the base, made no transaction in six months. Only one of the two dormant groups has the debt headroom to be worth reactivating.">
+<meta name="theme-color" content="#10283F">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Reinaldy Z. Arkaan <span>Data Analyst</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#thesis">Thesis</a>
+      <a href="../index.html#work">Projects</a>
+      <a class="hide-sm" href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <div class="case-head">
+    <a class="back" href="../index.html#work">Back to all projects</a>
+    <h1>Finding which credit card customers can safely spend more</h1>
+    <p class="lede">744 cardholders, 38% of the base, made no transaction in six months. Only one of the two dormant groups has the debt headroom to be worth reactivating.</p>
+    <dl class="case-meta">
+      <div><dt>Program</dt><dd>RevoU Python for Data Analysis, intermediate assignment</dd></div>
+      <div><dt>Date</dt><dd>September 2026</dd></div>
+      <div><dt>Tools</dt><dd>Python, pandas, matplotlib, seaborn, scikit-learn</dd></div>
+      <div><dt>Deliverables</dt><dd>40-slide deck, notebook</dd></div>
+    </dl>
+  </div>
+  <div class="case-body">
+    <div>
+      <section><h2>The question</h2><p class="question">Which customer groups still have room to transact more, and which of them can the bank target without creating bad debt?</p></section>
+      <section><h2>Context</h2><p>RevoBank earns a 1.5% merchant fee on every legitimate rupiah spent on its cards. The data covers 5,599 cards and 2,000 users, linked by client ID, over the last six months.</p></section>
+      <section><h2>What I did</h2><ol class="steps"><li>Cleaned both tables: fixed data types and typos, removed duplicates, dropped expired and zero-limit cards, and added age, a retired flag and debt-to-income ratio.</li><li>Explored net profit after fraud, fraud rate, spending by card brand, DTI by retirement status and credit score, and the link between age and credit limit.</li><li>Built customer-level features from recency, frequency and monetary value plus credit limit, DTI and age for 1,938 users, and scaled them with PowerTransformer, which cut the worst skew from 3.06 to 0.05.</li><li>Ran k-means, compared the elbow and silhouette results, and chose four clusters because four separates dormant customers by debt burden.</li></ol></section>
+      <section><h2>What I found</h2><ul class="findings"><li><strong>A third of the base is idle.</strong> 744 customers, 38.4%, made no transaction in six months while holding about Rp34.9 billion of approved credit limit.</li><li><strong>Two segments earn everything.</strong> All merchant fee revenue comes from the two active segments, split 55.9% and 44.1%.</li><li><strong>The best segment is the calmest.</strong> High-Value Active Spenders return Rp6.29 million per customer at a DTI of only 0.07.</li><li><strong>Only one dormant group is safe.</strong> One sits at a DTI of 0.13 against a portfolio median of 0.27. The other sits at 0.35.</li></ul></section>
+      <section><h2>What I recommended</h2><ul class="recs"><li>Send a win-back offer to the 253 low-risk dormant customers. If they spend their limit once, that is about Rp261 million in extra merchant fees with no new credit granted.</li><li>Protect the two active segments with a premium tier, priority service and proactive limit reviews.</li><li>Keep promotions for the leveraged heavy spenders volume-based, paired with velocity checks, since they also carry the highest fraud rate.</li><li>Leave the 491 high-burden dormant customers out of spend promotions and offer restructuring instead.</li><li>Target on recency and DTI rather than age.</li></ul></section>
+      
+      <section><h2>From the deck</h2><div class="gallery"><button type="button" aria-label="Enlarge slide: Title"><img src="../assets/img/slides/revobank-1.jpg" alt="Slide: Title" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Silhouette analysis"><img src="../assets/img/slides/revobank-2.jpg" alt="Slide: Silhouette analysis" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Cluster centres"><img src="../assets/img/slides/revobank-3.jpg" alt="Slide: Cluster centres" loading="lazy" width="1280" height="720"></button><button type="button" aria-label="Enlarge slide: Segment value"><img src="../assets/img/slides/revobank-4.jpg" alt="Slide: Segment value" loading="lazy" width="1280" height="720"></button></div><p class="note">Select a slide to enlarge it. The full deck is in the links.</p></section>
+    </div>
+    <aside class="aside">
+      <h2>Files and links</h2>
+      <ul class="links"><li><a href="../files/revobank-segmentation.pdf">View the deck <small>PDF</small></a></li><li><a href="../files/revobank-segmentation.pptx" download>Download the deck <small>PPTX</small></a></li><li><a href="https://colab.research.google.com/drive/1IaXcBLqGQ3wUA5VCGSwyp2JRQMFFfC7Q?usp=sharing" target="_blank" rel="noopener">Open the notebook <small>Google Colab</small></a></li><li><a href="../files/revobank-segmentation.ipynb" download>Download the notebook <small>IPYNB</small></a></li><li><a href="https://github.com/ReinaldyZA" target="_blank" rel="noopener">Source code <small>GitHub</small></a></li></ul>
+      <h2>Tools</h2>
+      <ul class="tags"><li class="tag">Python</li></ul>
+    </aside>
+  </div>
+</div>
+<div class="wrap next-case"><span>Next project</span><a href="revogrocers-sales-sql.html">Which grocery categories drive revenue, and why</a></div>
+</main>
+<dialog class="lightbox"><button type="button">Close</button><img src="" alt=""></dialog>
+<footer class="site-foot">
+  <div class="wrap">Reinaldy Zulfananda Arkaan, 2026. Projects from RevoU Full Stack Data Analytics and my undergraduate thesis at BINUS University. Company names in the RevoU projects are fictional.</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

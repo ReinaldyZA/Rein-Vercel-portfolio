@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JakU thesis | Reinaldy Z. Arkaan</title>
+<meta name="description" content="Machine learning classification of Jakarta&#x27;s air quality with a Streamlit dashboard.">
+<meta property="og:title" content="JakU thesis | Reinaldy Z. Arkaan">
+<meta property="og:description" content="Machine learning classification of Jakarta&#x27;s air quality with a Streamlit dashboard.">
+<meta name="theme-color" content="#10283F">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Reinaldy Z. Arkaan <span>Data Analyst</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#thesis">Thesis</a>
+      <a href="../index.html#work">Projects</a>
+      <a class="hide-sm" href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <div class="case-head">
+    <a class="back" href="../index.html#thesis">Back to home</a>
+    <h1>JakU: classifying Jakarta's air quality with machine learning</h1>
+    <p class="lede">My undergraduate thesis. A classification model trained on official ISPU readings, wrapped in a Streamlit dashboard that people tested and rated 78.28 on the System Usability Scale.</p>
+    <dl class="case-meta">
+      <div><dt>Program</dt><dd>Undergraduate thesis, Informatics, BINUS University</dd></div>
+      <div><dt>Date</dt><dd>2026, defended in July</dd></div>
+      <div><dt>Tools</dt><dd>Python, scikit-learn, XGBoost, Streamlit, Plotly, Folium</dd></div>
+      <div><dt>Team</dt><dd>Group of three, supervised by Rezki Yunanda</dd></div>
+    </dl>
+  </div>
+  <div class="case-body">
+    <div>
+      <section><h2>Why this topic</h2>
+        <p>Jakarta publishes a daily air quality index, ISPU, from five monitoring stations. The numbers are public, but they arrive as raw tables that most residents never read. We wanted to know whether a model could sort daily pollutant readings into the official categories reliably, and whether that result could be shown in a way ordinary users would actually use.</p>
+        <p class="question">Can daily pollutant readings be classified into ISPU categories accurately enough to support everyday decisions, and can the result be delivered in a usable dashboard?</p>
+      </section>
+
+      <section><h2>Data and preparation</h2>
+        <p>The research dataset held 3,330 daily readings from five SPKU stations, with six pollutants (PM10, PM2.5, SO₂, CO, O₃ and NO₂) and three target classes: Good, Moderate and Unhealthy. The classes are imbalanced, with Moderate making up 78% of the data.</p>
+        <ol class="steps">
+          <li>Filtered invalid category rows and merged rare classes into the three-class scheme.</li>
+          <li>Filled missing values with the median.</li>
+          <li>Removed outliers with the IQR method, which kept 3,057 rows.</li>
+          <li>Split the data 80/20 with stratification and scaled features for SVM only.</li>
+        </ol>
+        <figure class="figure"><img src="../assets/img/jaku/class-distribution.jpg" alt="Bar and pie chart of the target classes: Moderate 2,604, Good 386, Unhealthy 340" loading="lazy"><figcaption>Class distribution before cleaning.</figcaption></figure>
+      </section>
+
+      <section><h2>Modelling with CRISP-DM</h2>
+        <p>I compared Random Forest, XGBoost and SVM, tuned each with GridSearchCV and five-fold stratified cross-validation, and judged them on macro F1 as well as accuracy because of the class imbalance.</p>
+        <div class="table-wrap"><table class="data">
+          <thead><tr><th>Model</th><th class="num">Test accuracy</th><th class="num">Macro F1</th><th class="num">CV mean</th><th class="num">CV std</th></tr></thead>
+          <tbody><tr class="best"><td>XGBoost</td><td class="num">97.71%</td><td class="num">0.9634</td><td class="num">98.45%</td><td class="num">0.0021</td></tr><tr class=""><td>Random Forest</td><td class="num">97.06%</td><td class="num">0.9527</td><td class="num">98.08%</td><td class="num">0.0054</td></tr><tr class=""><td>SVM</td><td class="num">96.90%</td><td class="num">0.9457</td><td class="num">95.38%</td><td class="num">0.0044</td></tr></tbody>
+        </table></div>
+        <p class="note">XGBoost was chosen because it scored highest and had the lowest cross-validation spread, which makes it the most stable of the three.</p>
+        <figure class="figure"><img src="../assets/img/jaku/confusion-matrix.jpg" alt="Confusion matrices for Random Forest, XGBoost and SVM" loading="lazy"><figcaption>All three models caught every Unhealthy day in the test set, 53 out of 53.</figcaption></figure>
+        <figure class="figure"><img src="../assets/img/jaku/feature-importance.jpg" alt="Feature importance charts showing PM2.5 as the dominant feature" loading="lazy"><figcaption>PM2.5 carries 66% of the importance in Random Forest and 73% in XGBoost.</figcaption></figure>
+        <p>As an additional experiment requested by my supervisor, I tested SMOTE oversampling. It lifted minority-class recall for Random Forest and XGBoost but hurt SVM, so the deployed model stays XGBoost trained on the original distribution.</p>
+      </section>
+
+      <section><h2>Designing the dashboard</h2>
+        <p>The system side followed Rapid Application Development with a User-Centered Design approach. We gathered requirements through a questionnaire, reviewed existing apps such as JAKI and the city's air quality portal, and moved from user flows to wireframes to a high-fidelity Figma prototype before building.</p>
+        <p>Usability was measured with the System Usability Scale. The dashboard scored 78.28 from 16 respondents, above the common benchmark of 68.</p>
+      </section>
+
+      <section><h2>What the dashboard does</h2>
+        <p>The app is a single Streamlit file of more than 3,000 lines, deployed on Streamlit Community Cloud and now running on the 2024 to 2025 open data release.</p>
+        <ul class="findings">
+          <li><strong>Dashboard.</strong> Jakarta's current ISPU, an interactive map of the five regions and a seven-day trend with a date picker.</li>
+          <li><strong>Region detail.</strong> Conditions for each administrative city, from Central to East Jakarta.</li>
+          <li><strong>Prediction simulator.</strong> Six pollutant sliders and preset scenarios that return a category from the trained model in real time.</li>
+          <li><strong>Education and insight.</strong> What each category means for health, common pollution sources and practical tips.</li>
+        </ul>
+      </section>
+
+      <section><h2>My part and what I took away</h2>
+        <p>I wrote all of the analysis code in Google Colab, built the Streamlit dashboard and wrote the thesis document, working with my teammates James Randolph and Syafiq Ammar.</p>
+        <p>The main lesson was that a high accuracy score means little on imbalanced data unless you look at the minority classes directly. The second was that the model is only half the product. The half people judge is whether they can read the answer.</p>
+      </section>
+    </div>
+    <aside class="aside">
+      <img src="../assets/img/jaku/logo_jaku.svg" alt="JakU logo" width="180" style="margin-bottom:22px">
+      <h2>Files and links</h2>
+      <ul class="links"><li><a href="https://jaku-dashboard5-reinzulfarkaan.streamlit.app/" target="_blank" rel="noopener">Open the live dashboard <small>Streamlit</small></a></li><li><a href="https://github.com/ReinaldyZA/JAKU5" target="_blank" rel="noopener">Source code <small>GitHub</small></a></li><li><a href="../files/jaku-ispu-crisp-dm.ipynb" download>Download the notebook <small>IPYNB</small></a></li></ul>
+      <h2>Tools</h2>
+      <ul class="tags"><li class="tag">Python</li><li class="tag">Machine learning</li><li class="tag">Streamlit</li><li class="tag">UX research</li></ul>
+    </aside>
+  </div>
+</div>
+<div class="wrap next-case"><span>Next project</span><a href="berka-credit-risk.html">What predicts a bad loan at a retail bank</a></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">Reinaldy Zulfananda Arkaan, 2026. Projects from RevoU Full Stack Data Analytics and my undergraduate thesis at BINUS University. Company names in the RevoU projects are fictional.</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
