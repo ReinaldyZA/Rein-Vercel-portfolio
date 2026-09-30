@@ -130,7 +130,14 @@ section.block { padding: 72px 0; border-top: 1px solid var(--line); }
 /* Contact / footer */
 .contact { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: end; }
 .contact h2 { max-width: 24ch; }
-.contact-more { margin: 16px 0 0; font-size: .95rem; color: var(--ink-soft); }
+.contact-more { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 18px 0 0; font-size: .95rem; color: var(--ink); }
+.contact-more a, .contact-more span { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); text-decoration: none; font-weight: 600; }
+.contact-more a:hover { color: var(--blue); text-decoration: underline; }
+.contact-more i { font-size: 1.2rem; width: 1.2rem; text-align: center; }
+.contact-more .fa-instagram { color: #C13584; }
+.contact-more .fa-github { color: #181717; }
+.contact-more .fa-discord { color: #5865F2; }
+.btn i { font-size: 1.1rem; }
 .site-foot { padding: 28px 0 40px; font-size: .88rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
 
 /* Case study page */
