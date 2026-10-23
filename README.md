@@ -16,7 +16,7 @@ XGBoost reached 97.71% test accuracy and 0.9634 macro F1, caught every Unhealthy
 
 | Project | Tools | Key finding |
 | --- | --- | --- |
-| What predicts a bad loan at a retail bank | Python, SQL (DuckDB), Tableau | Two pre-approval screens bring the problematic loan rate from 11.1% to 5.0%. |
+| What predicts a bad loan at a retail bank | Python, SQL (DuckDB), Tableau | Two pre-loan reviews bring the problematic loan rate from 11.1% to 5.0%. |
 | Tracking IDR 14.5 billion of uncollected hospital revenue | Tableau | Self-pay patients are 13% of admissions but hold 30% of pending revenue. |
 | Finding which credit card customers can safely spend more | Python, scikit-learn | 38% of cardholders were dormant for six months, and only one dormant group is safe to reactivate. |
 | Which grocery categories drive revenue, and why | SQL (BigQuery) | Revenue follows units per customer, not customer count. The top four categories bring in 44%. |
@@ -49,4 +49,3 @@ Built as a static site with plain HTML, CSS and JavaScript, deployed on Vercel.
 [LinkedIn](https://www.linkedin.com/in/reinaldy-zulfananda-arkaan-30567a179/) · [GitHub](https://github.com/ReinaldyZA)
 
 *Company names in the RevoU projects are fictional and used for educational purposes.*
-# Rein-Portfolio
